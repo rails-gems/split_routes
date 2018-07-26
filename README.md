@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'split_routes', github: 'wuyuedefeng/split_routes'
+gem 'split_routes', github: 'rails-gems/split_routes'
 ```
 
 And then execute:
