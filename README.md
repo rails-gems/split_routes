@@ -26,6 +26,24 @@ $ gem install split_routes
 ```
 $ rails g split_routes admin
 ```
+或者自定义创建`Slite Route File`
+```
+# routes/admin.rb
+# routes/api.rb
+```
+eg `routes/api.rb`
+```
+defaults format: :json do
+  constraints subdomain: /api/ do
+    mount_devise_token_auth_for 'User', at: 'auth'
+    scope module: 'api' do
+      namespace :v1 do
+        resources :tasks
+      end
+    end
+  end
+end
+```
 
 ## Contributing
 Contribution directions go here.
