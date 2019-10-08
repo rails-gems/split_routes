@@ -31,8 +31,8 @@ $ rails g split_routes admin
 # routes/admin.rb
 # routes/api.rb
 ```
-eg `routes/api.rb`
 ```
+# eg routes/api.rb
 defaults format: :json do
   constraints subdomain: /api/ do
     mount_devise_token_auth_for 'User', at: 'auth'
@@ -40,6 +40,16 @@ defaults format: :json do
       namespace :v1 do
         resources :tasks
       end
+    end
+  end
+end
+```
+```
+# eg: routes/admin.rb
+defaults format: :json do
+  constraints subdomain: /apa/ do
+    mount_devise_token_auth_for 'Admin', at: 'admin_auth'
+    scope module: 'admin' do
     end
   end
 end
