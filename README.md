@@ -31,7 +31,7 @@ $ rails g split_routes admin
 # routes/admin.rb
 # routes/api.rb
 ```
-```
+```ruby
 # eg routes/api.rb
 defaults format: :json do
   constraints subdomain: /api/ do
@@ -44,7 +44,7 @@ defaults format: :json do
   end
 end
 ```
-```
+```ruby
 # eg: routes/admin.rb
 defaults format: :json do
   constraints subdomain: /apa/ do
