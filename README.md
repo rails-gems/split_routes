@@ -8,17 +8,12 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'split_routes', github: 'rails-gems/split_routes'
+gem 'split_routes', github: 'rails-gems/split_routes', branch: 'master'
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install split_routes
 ```
 
 ### 创建`Split Route File`
